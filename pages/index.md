@@ -5,10 +5,10 @@ layout: home
 hero:
   name: 'TenoxUI CSS'
   text: '- Inconvenient CSS Framework'
-  tagline: TenoxUI is a javascript library
+  tagline: Tiny javascript library for managing styles with DOM
   actions:
     - theme: brand
-      text: Explore Docs
+      text: Get Started
       link: /docs/getting-started
     - theme: alt
       text: GitHub
