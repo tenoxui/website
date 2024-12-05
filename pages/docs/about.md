@@ -2,9 +2,7 @@
 title: About
 ---
 
-<script setup>
-import TenoxUI from '../../components/tenoxui.vue'
-</script>
+# About
 
 <TenoxUI
 code='<div class="[width,height]-200px [background]-red"></div>'/>
