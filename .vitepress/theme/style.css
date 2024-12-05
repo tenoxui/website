@@ -1,48 +1,3 @@
-/**
- * Customize default theme styling by overriding CSS variables:
- * https://github.com/vuejs/vitepress/blob/main/src/client/theme-default/styles/vars.css
- */
-
-/**
- * Colors
- *
- * Each colors have exact same color scale system with 3 levels of solid
- * colors with different brightness, and 1 soft color.
- *
- * - `XXX-1`: The most solid color used mainly for colored text. It must
- *   satisfy the contrast ratio against when used on top of `XXX-soft`.
- *
- * - `XXX-2`: The color used mainly for hover state of the button.
- *
- * - `XXX-3`: The color for solid background, such as bg color of the button.
- *   It must satisfy the contrast ratio with pure white (#ffffff) text on
- *   top of it.
- *
- * - `XXX-soft`: The color used for subtle background such as custom container
- *   or badges. It must satisfy the contrast ratio when putting `XXX-1` colors
- *   on top of it.
- *
- *   The soft color must be semi transparent alpha channel. This is crucial
- *   because it allows adding multiple "soft" colors on top of each other
- *   to create a accent, such as when having inline code block inside
- *   custom containers.
- *
- * - `default`: The color used purely for subtle indication without any
- *   special meanings attached to it such as bg color for menu hover state.
- *
- * - `brand`: Used for primary brand colors, such as link text, button with
- *   brand theme, etc.
- *
- * - `tip`: Used to indicate useful information. The default theme uses the
- *   brand color for this by default.
- *
- * - `warning`: Used to indicate warning to the users. Used in custom
- *   container, badges, etc.
- *
- * - `danger`: Used to show error, or dangerous message to the users. Used
- *   in custom container, badges, etc.
- * -------------------------------------------------------------------------- */
-
 :root {
   --vp-c-default-1: var(--vp-c-gray-1);
   --vp-c-default-2: var(--vp-c-gray-2);
@@ -80,10 +35,6 @@
   --vp-c-indigo-3: #a5dc08;
 }
 
-/**
- * Component: Button
- * -------------------------------------------------------------------------- */
-
 :root {
   --vp-button-brand-border: transparent;
   --vp-button-brand-text: var(--vp-c-white);
@@ -95,16 +46,10 @@
   --vp-button-brand-active-text: var(--vp-c-white);
   --vp-button-brand-active-bg: var(--vp-c-brand-1);
 }
+-----------------------------------*/
 
-/**
- * Component: Home
- * -------------------------------------------------------------------------- */
-
-:root {
-  --vp-button-brand-text: var(--vp-c-black);
-  --vp-home-hero-name-color: transparent;
-
-  /* --vp-home-hero-name-background: -webkit-linear-gradient(
+: root {--vp-button-brand-text: var(--vp-c-black) ; --vp-home-hero-name-color:
+  transparent; /* --vp-home-hero-name-background: -webkit-linear-gradient(
     120deg,
     #bd34fe 30%,
     #41d1ff
@@ -116,64 +61,11 @@
     #47caff 50%
   );
   */
-  --vp-home-hero-name-background: -webkit-linear-gradient(120deg, #89b214 30%, #ccf654);
-
-  --vp-home-hero-image-background-image: none;
-  --vp-home-hero-image-filter: blur(44px);
-}
-
-@media (min-width: 640px) {
-  :root {
-    --vp-home-hero-image-filter: blur(56px);
-  }
-}
-
-@media (min-width: 960px) {
-  :root {
-    --vp-home-hero-image-filter: blur(68px);
-  }
-}
-
-/**
- * Component: Custom Block
- * -------------------------------------------------------------------------- */
-
-:root {
-  --vp-custom-block-tip-border: transparent;
-  --vp-custom-block-tip-text: var(--vp-c-text-1);
-  --vp-custom-block-tip-bg: var(--vp-c-brand-soft);
-  --vp-custom-block-tip-code-bg: var(--vp-c-brand-soft);
-}
-
-/**
- * Component: Algolia
- * -------------------------------------------------------------------------- */
-
-.DocSearch {
-  --docsearch-primary-color: var(--vp-c-brand-1) !important;
-}
-
-.custom {
-  --vp-c-brand-50: #fbfcf8;
-  --vp-c-brand-100: #f4f8e9;
-  --vp-c-brand-200: #e8f3c9;
-  --vp-c-brand-300: #ddf0a5;
-  --vp-c-brand-400: #d4f17e;
-  --vp-c-brand-500: #ccf654;
-  --vp-c-brand-600: #bef522;
-  --vp-c-brand-700: #a5dc08;
-  --vp-c-brand-800: #81ad05;
-  --vp-c-brand-900: #5d7c03;
-  --vp-c-brand-950: #384b01;
-  --vp-c-gray-50: #f9fafa;
-  --vp-c-gray-100: #e8eaed;
-  --vp-c-gray-200: #c7cad1;
-  --vp-c-gray-300: #a5abb5;
-  --vp-c-gray-400: #838b9a;
-  --vp-c-gray-500: #636c7c;
-  --vp-c-gray-600: #485875;
-  --vp-c-gray-700: #314569;
-  --vp-c-gray-800: #1e345a;
-  --vp-c-gray-900: #102345;
-  --vp-c-gray-950: #07142d;
-}
+  --vp-home-hero-name-background: -webkit-linear-gradient(120deg, #89b214 30%, #ccf654) ;
+  --vp-home-hero-image-background-image: none; --vp-home-hero-image-filter: blur(44px) ;} @media (
+    min-width: 640px
+  ) {: root {--vp-home-hero-image-filter: blur(56px) ;}} @media (min-width: 960px) {: root {--vp-home-hero-image-filter:
+  blur(68px) ;}}: root {--vp-custom-block-tip-border: transparent; --vp-custom-block-tip-text:
+  var(--vp-c-text-1) ; --vp-custom-block-tip-bg: var(--vp-c-brand-soft) ;
+  --vp-custom-block-tip-code-bg: var(--vp-c-brand-soft) ;} .DocSearch {--docsearch-primary-color:
+  var(--vp-c-brand-1) !important;};

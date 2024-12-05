@@ -5,6 +5,7 @@ import DefaultTheme from 'vitepress/theme'
 import TwoslashFloatingVue from '@shikijs/vitepress-twoslash/client'
 import '@shikijs/vitepress-twoslash/style.css'
 import './style.css'
+import TenoxUI from './components/tenoxui.vue'
 
 export default {
   extends: DefaultTheme,
@@ -14,6 +15,6 @@ export default {
     })
   },
   enhanceApp({ app, router, siteData }) {
-    app.use(TwoslashFloatingVue)
+    app.use(TwoslashFloatingVue), app.component('TenoxUI', TenoxUI)
   }
 } satisfies Theme
