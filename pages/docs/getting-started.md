@@ -4,11 +4,36 @@ title: Getting Started
 
 # Getting Started
 
-::: warning Before you start!
-TenoxUI is a javascript library for style management but **isn't really a CSS framework**. It runs in DOM, and apply the styles directly to the element's style (inline-style). Even though there's static generator, it's still under maintenance and far from stable release.
+## How it works?
 
-TenoxUI isn't intended for website development. Does it works? Yes. But there still many of CSS frameworks you can use for better features and wider use cases.
+This is basic example of TenoxUI implementation:
+
+<TenoxUI code="<div class='bg-red p-1rem text-white'>Hello</div>"/>
+
+::: code-group
+
+```html [index.html]
+<div class="bg-red p-1rem">Hello</div>
+```
+
+```js [index.js]
+import { tenoxui } from 'tenoxui'
+
+tenoxui({
+  property: {
+    bg: 'background',
+    p: 'padding'
+  }
+})
+```
+
 :::
+
+As you can see, instead of using defined value like `p-4`, `m-3`, and so on, TenoxUI uses real CSS value. For example, `p-1rem`, `bg-red`, and so on. Just stick with this:
+
+```
+{property}-{value}
+```
 
 ## Installation
 
