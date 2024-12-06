@@ -1,8 +1,12 @@
 # Getting Started
 
+## Prerequisites
+
+**_Familiar_** with CSS 🤓
+
 ## Try it Online
 
-Try [Online TenoxUI Playground](https://tenoxui-playground.vercel.app). Very tiny app build with [Preact](https://preactjs.com/) and `tenoxui/core`. The bundle size is `40kb~` minified and only `15kb~` gzip. A very tiny yet powerful. It doesn't need any server to compute the styles, no generated css, and it's blazing fast.
+We create online playground for you to have quick test of TenoxUI syntax. Check [Online Playground](https://tenoxui-playground.vercel.app).
 
 ## Installation
 
@@ -93,7 +97,7 @@ export default function App() {
 ```vue
 <script setup>
 import { onMounted } from 'vue'
-import tenoxui from 'tenoxui'
+import { tenoxui } from 'tenoxui'
 
 onMounted(() => {
   tenoxui(/* your tenoxui config here */)
@@ -107,6 +111,8 @@ onMounted(() => {
 
 ## What's Next?
 
+- [**Writing Values**](/docs/core/available-values) - What CSS values you can write in TenoxUI.
+
 - **Customizing TenoxUI** - Customizing [types & properties](/docs/core/type-and-property), [values](/docs/core/values), and other to make your development easier.
 
-- [Attributify Mode](/docs/core/attributify) - Using attributify mode to make your element easier to maintain
+- [Attributify Mode](/docs/core/attributify) - Using attributify mode to make your element easier to maintain.
