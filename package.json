@@ -6,9 +6,6 @@
   "author": "NOuSantx <nousantx@gmail.com>",
   "license": "MIT",
   "homepage": "https://github.com/tenoxui/website#readme",
-  "keywords": [
-    "keywords"
-  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tenoxui/website.git"
@@ -20,13 +17,15 @@
   "scripts": {
     "dev": "vitepress dev",
     "build": "vitepress build",
-    "preview": "vitepress preview"
+    "preview": "vitepress preview",
+    "format": "prettier -w ."
   },
   "devDependencies": {
     "@nousantx/someutils": "^0.6.0",
     "@shikijs/vitepress-twoslash": "^1.24.0",
     "@tenoxui/core": "1.3.2",
     "@tenoxui/property": "^1.4.5",
+    "prettier": "^3.4.2",
     "tenoxui": "^0.12.6",
     "typescript": "^5.7.2",
     "vitepress": "^1.5.0"
