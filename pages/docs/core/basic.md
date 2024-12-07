@@ -1,6 +1,14 @@
 # The Basics
 
-Just thinking TenoxUI is a library that allows you to write CSS directly in your class name. And that includes **all** CSS properties and even variables as well.
+::: info BEFORE YOU START
+
+We will use [`@tenoxui/core`](/), and [default `@tenoxui/property`](/) packages for this documentation, just to make sure you know the fundamental of this library from scratch.
+
+`@tenoxui/core` is the core function that built TenoxUI. And `@tenoxui/property` is just basic predefined [properties](/docs/config/properties).
+
+:::
+
+Fundamentally, TenoxUI is just a library that allows you to write CSS directly in your class name. And that includes **all** CSS properties and even variables as well.
 
 By default, and without **any** configuration, you can write class names like this:
 
@@ -21,7 +29,7 @@ div {
 }
 ```
 
-But of course it's not very wise to write long class name like that. And there's coming [type and property](/docs/core/type-and-property) or can be called as `shorthand`.
+But of course it's not very wise to write long class name like that. And there's coming [type and property](/docs/config/properties) or can be called as `shorthand`.
 
 ## Types and Properties Basic
 
