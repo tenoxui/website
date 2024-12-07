@@ -113,6 +113,6 @@ onMounted(() => {
 
 - [**Writing Values**](/docs/core/available-values) - What CSS values you can write in TenoxUI.
 
-- **Customizing TenoxUI** - Customizing [types & properties](/docs/core/type-and-property), [values](/docs/core/values), and other to make your development easier.
+- **Customizing TenoxUI** - Customizing [types & properties](/docs/config/properties), [values](/docs/config/values), and other to make your development easier.
 
 - [Attributify Mode](/docs/core/attributify) - Using attributify mode to make your element easier to maintain.

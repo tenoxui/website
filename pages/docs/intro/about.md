@@ -14,7 +14,7 @@ TenoxUI is using **utility-first** based. While other CSS framework using _pre-d
 <div class="bg-red p-8px m-1rem"></div>
 ```
 
-Each class names is divided into two parts, first one is called `type`. `type` is a shorthand for exact CSS properties or variables like `bg`, `p`, `m`, and something like that you define under the [type & property](/docs/core/type-and-property).
+Each class names is divided into two parts, first one is called `type`. `type` is a shorthand for exact CSS properties or variables like `bg`, `p`, `m`, and something like that you define under the [type & property](/docs/config/properties).
 
 The second one is `value`. This is the CSS value you included with the `type`. Like `red`, `8px`, and `1rem`. Overall, TenoxUI syntax is basically like this:
 
