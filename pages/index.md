@@ -8,8 +8,11 @@ hero:
   tagline: Tiny javascript library for managing styles with DOM
   actions:
     - theme: brand
+      text: What is TenoxUI?
+      link: /docs/intro/about
+    - theme: alt
       text: Get Started
-      link: /docs/getting-started
+      link: /docs/intro/getting-started
     - theme: alt
       text: GitHub
       link: https://github.com/tenoxui/tenoxui
