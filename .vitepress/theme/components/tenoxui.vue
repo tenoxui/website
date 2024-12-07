@@ -20,8 +20,10 @@ onMounted(() => {
 
 <template>
   <article data-tenox>
-    <div class="p-1rem grid [--g1,--g2,bc]-$vp-c-gray-2 bw-1px bs-solid br-8px center h-mn-10rem">
-      <div v-html="code" />
+    <div
+      class="p-1rem grid [--g1,--g2,bc]-$vp-c-gray-2 bw-1px bs-solid br-8px center h-mn-10rem text-white"
+    >
+      <div class="w-full d-flex jc-center" v-html="code" />
     </div>
   </article>
 </template>
