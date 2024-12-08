@@ -12,8 +12,8 @@ export default defineConfig({
     ['meta', { name: 'twitter:card', content: 'TenoxUI Documentation Site' }],
     ['meta', { name: 'twitter:image', content: '/tenoxui_social_card.jpg' }]
   ],
-
   srcDir: 'pages',
+  outDir: 'dist',
   markdown: {
     codeTransformers: [transformerTwoslash()]
   },
@@ -38,7 +38,7 @@ export default defineConfig({
           { text: 'The Basics', link: '/docs/core/basic' },
           { text: 'Writing Values', link: '/docs/core/available-values' },
           { text: 'Pseudo Classes', link: '/docs/core/pseudo-class' },
-          { text: 'Responsive Design', link: '/docs/core/breakpoint-and-responsive' },
+          { text: 'Responsive Design', link: '/docs/core/responsive-design' },
           { text: 'Attributify Mode', link: '/docs/core/attributify' }
         ]
       },
@@ -53,11 +53,6 @@ export default defineConfig({
           { text: 'Class Name Alias', link: '/docs/config/aliases' },
           { text: 'Breakpoint', link: '/docs/config/breakpoints' }
         ]
-      },
-      {
-        text: 'Examples',
-        collapsed: true,
-        items: [{ text: 'DOM Manipulation', link: '/docs/examples/dom-manipulation' }]
       }
     ],
     socialLinks: [{ icon: 'github', link: 'https://github.com/vuejs/vitepress' }],

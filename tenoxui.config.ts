@@ -2,6 +2,8 @@ import type { CoreConfig, Property } from '@tenoxui/core/full'
 import { property as txProps } from '@tenoxui/property'
 import { merge, transformClasses } from '@nousantx/someutils'
 
+// Docs related config
+// Put tenoxui config for documentation here
 const docsConfig = {
   property: {
     gradient: {
@@ -35,7 +37,9 @@ const docsConfig = {
       iflex: 'inline-flex'
     },
     background: {
-      'bg-red-500': '#f62121'
+      'bg-red-500': '#f62121',
+      first: 'red',
+      second: 'linear-gradient(to right, yellow, blue)'
     },
     padding: {
       'p-1': '2px',
@@ -50,6 +54,7 @@ const docsConfig = {
   }
 }
 
+// Global config
 const config: CoreConfig = {
   property: { ...txProps, ...docsConfig.property },
   values: merge(docsConfig.values, {}),
