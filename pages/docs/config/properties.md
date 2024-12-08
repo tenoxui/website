@@ -2,6 +2,18 @@
 
 We call the shorthand of CSS properties or variables as `type`, and here we will learn more about this.
 
+## Types
+
+```ts twoslash
+type CSSProperty = keyof CSSStyleDeclaration
+type CSSVariable = `--${string}`
+type CSSPropertyOrVariable = CSSProperty | CSSVariable
+type GetCSSProperty = CSSPropertyOrVariable | CSSPropertyOrVariable[]
+type Property = {
+  [type: string]: GetCSSProperty | { property?: GetCSSProperty; value?: string }
+}
+```
+
 ## Basic Properties
 
 The shorthand is only have single property as value. Example:

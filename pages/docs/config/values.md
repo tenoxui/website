@@ -2,6 +2,14 @@
 
 TenoxUI has a feature for storing CSS value and the `type` will recognize and applies them.
 
+## Types
+
+```ts twoslash
+type Values = {
+  [type: string]: { [value: string]: string } | string
+}
+```
+
 ## Global Scope
 
 This example allows you to define any alias to the CSS value and can be accessed for **all** `type`.

@@ -143,7 +143,7 @@ new MakeTenoxUI({
 
 Define responsive breakpoint.
 
-  <TenoxUI code='<div class="max-md:bg-red md:bg-blue lg:bg-yellow box-200px br-1rem center">Resize your screen!</div>'/>
+<TenoxUI code='<div class="max-md:bg-red md:bg-blue lg:bg-yellow box-200px br-1rem center">Resize your screen!</div>'/>
 
 ::: code-group
 

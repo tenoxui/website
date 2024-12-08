@@ -2,6 +2,18 @@
 
 You can define custom class names with `property-based` class name.
 
+```ts twoslash
+type CSSProperty = keyof CSSStyleDeclaration
+type CSSVariable = `--${string}`
+type CSSPropertyOrVariable = CSSProperty | CSSVariable
+
+type Classes = {
+  [property in CSSPropertyOrVariable]?: {
+    [className: string]: string
+  }
+}
+```
+
 ## Basic Usage
 
 Here's some example of TenoxUI's `classes` usage:
