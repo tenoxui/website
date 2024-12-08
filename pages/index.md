@@ -18,8 +18,16 @@ hero:
       link: https://github.com/tenoxui/tenoxui
 
 features:
-  - icon: 🔫
-    title: Blazing Fast
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-    link: /api-examples
+  - icon: 🎨
+    title: Utility-First Based
+    details: Build styles quickly with a utility-first approach, focusing on practicality and speed.
+  - icon: 🌐
+    title: DOM-Based Styling
+    details: Leverages the DOM to efficiently apply and manage styles in real-time.
+  - icon: 🌍
+    title: Use Anything
+    details: Use any CSS properties or CSS values the browser can access.
+  - icon: 🏷️
+    title: Attributify Mode
+    details: Use attributes directly in HTML for applying styles dynamically and declaratively.
 ---
