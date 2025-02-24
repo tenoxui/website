@@ -55,7 +55,7 @@ export default defineConfig({
         ]
       }
     ],
-    socialLinks: [{ icon: 'github', link: 'https://github.com/vuejs/vitepress' }],
+    socialLinks: [{ icon: 'github', link: 'https://github.com/tenoxui/tenoxui' }],
     lastUpdated: true,
     editLink: {
       pattern: 'https://github.com/tenoxui/website/edit/main/pages/:path',
