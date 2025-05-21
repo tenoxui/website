@@ -1,33 +1,73 @@
 ---
-title: About
+title: What's TenoxUI?
 ---
 
 # What is TenoxUI?
 
-TenoxUI is a JavaScript library designed for dynamic style management within the DOM. Unlike traditional CSS frameworks that generate CSS files or rules, TenoxUI applies styles directly to elements using inline styles. This approach provides flexibility and simplifies the way you manage styles programmatically.
+**TenoxUI** is JavaScript library for creating highly customized, flexible, and extensible **utility-first CSS framework**.
 
-## Purpose
+## Utility-First Syntax
 
-TenoxUI was built to provide a lightweight and dynamic solution for managing styles at the element level. It is particularly useful for applications where real-time, DOM-based styling is preferred over traditional CSS workflows. Whether you're building a custom component library or experimenting with interactive styling, TenoxUI enables you to achieve granular control without the need for precompiled stylesheets.
-
-## Syntax
-
-TenoxUI is using **utility-first** based. While other CSS framework using _pre-defined_ values like `p-4`, `m-8`, `flex`, and so on, TenoxUI's syntax dynamically matches CSS properties and values directly within a single class name. Here's an example:
-
-```html
-<div class="bg-red p-8px m-1rem"></div>
-```
-
-Each class names is divided into two parts, first one is called `type`. `type` is a shorthand for exact CSS properties or variables like `bg`, `p`, `m`, and something like that you define under the [type & property](/docs/config/properties).
-
-The second one is `value`. This is the CSS value you included with the `type`. Like `red`, `8px`, and `1rem`. Overall, TenoxUI syntax is basically like this:
+In **TenoxUI**, the class names you will define will roughly looks like this :
 
 ```
-{type}-{value}
+{variant}:{type}-{value}/{secondValue}
 ```
 
-::: warning BEFORE TAKING FURTHER!
-TenoxUI is a javascript library for style management and **isn't traditional CSS framework**. It runs in DOM, and apply the styles directly to the element's style (inline-style). Even though there's static generator, it's still under maintenance and far from stable release.
+- `variant` - A variation you can apply to the existing rules, like adding `hover`, `focus`, or `dark`
 
-**TenoxUI is not primarily intended for traditional web development**. Although it can be used in web projects, other CSS frameworks may provide more robust features and broader support for common use cases. TenoxUI shines in scenarios that require programmatic and dynamic styling directly in the DOM.
-:::
+- `type`- This is the main [shorthand](/docs/guides/writing-rules.md) to determine on where properties the value will given into
+
+- `value`- Whatever string come after the `type`, can be either `length`, `color`, or anything
+
+- `secondValue`- Just like `value`, any value after `/` will considered as `secondValue`
+
+## Writing your First Shorthand
+
+It's easy to define new utilities in **TenoxUI**, here's the example :
+
+```javascript {5}
+import { TenoxUI } from 'tenoxui'
+
+const css = new TenoxUI({
+  property: {
+    w: 'width'
+  }
+})
+```
+
+The code above creates a `w-*` utility. That means `w` becomes the utility prefix or the shorthand for `width` property, and **anything** after this shorthand become its value. For example :
+
+```javascript
+css.render([
+  // number and unit value
+  'w-10px',
+  'w-1rem',
+  // string value
+  'w-max-content'
+])
+```
+
+And you will get this output :
+
+```css
+.w-10px {
+  width: 10px;
+}
+.w-1rem {
+  width: 1rem;
+}
+.w-max-content {
+  width: max-content;
+}
+```
+
+Without much configuration, you already create `w-*` utility that allows you access `width` property in second. But There's much, much more you can do with **TenoxUI**.
+
+## What's Next?
+
+- [**Writing Rules**](/) - A complete guide for extending shorthands to the next level
+- [**Customizing Variants**](/) - A guide to write variants in TenoxUI
+- [**Responsive Design**](/) - Learn how to create a beautiful site that works in every screen size
+- [`values`](/) - Creating CSS value aliases
+- [`values`](/) - Creating CSS value aliases

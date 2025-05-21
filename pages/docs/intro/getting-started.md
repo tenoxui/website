@@ -4,115 +4,124 @@
 
 **_Familiar_** with CSS 🤓
 
-## Try it Online
-
-We create online playground for you to have quick test of TenoxUI syntax. Check [Online Playground](https://tenoxui-playground.vercel.app).
-
 ## Installation
 
-### NPM
+Getting started with TenoxUI by running :
 
 ::: code-group
 
 ```sh [npm]
-$ npm i tenoxui --save-dev
+npm install tenoxui
+```
+
+```sh [pnpm]
+pnpm install tenoxui
 ```
 
 ```sh [yarn]
-$ yarn add tenoxui -D
+yarn add tenoxui
 ```
 
 :::
 
-Or use the lightweight `core` instead :
+### `esm/cjs`
 
-::: code-group
+```javascript
+// esm
+import { TenoxUI } from 'tenoxui'
 
-```sh [npm]
-$ npm i @tenoxui/core --save-dev
+// cjs
+const { TenoxUI } = require('tenoxui')
 ```
 
-```sh [yarn]
-$ yarn add @tenoxui/core -D
-```
-
-:::
-
-### CDN
-
-You can use bundled `UMD` for your HTML project:
+### `iife/umd`
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/tenoxui/dist/js/tenoxui.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/tenoxui/dist/index.iife.js"></script>
+<script>
+  const { TenoxUI } = __tenoxui__
+</script>
 ```
 
-Or use `tenoxui/core`:
+## Usage Example
 
-```html
-<script src="https://cdn.jsdelivr.net/npm/@tenoxui/core/dist/tenoxui.min.js"></script>
+```javascript
+import { TenoxUI } from 'tenoxui'
+
+const css = new TenoxUI({
+  property: {
+    bg: 'background',
+    size: ['width', 'height']
+  }
+})
+
+console.log(css.render(['bg-red', 'bg-#cff654', 'size-100px', 'size-10rem']))
 ```
 
-::: info What's the difference?
+Output:
 
-There's not much size difference between both packages, the `tenoxui` package is just ready-to-use package of tenoxui, and if you use `@tenoxui/core`, you need to add **more** steps for configuration.
+```css
+.bg-red {
+  background: red;
+}
+.bg-\#cff654 {
+  background: #cff654;
+}
+.size-100px {
+  width: 100px;
+  height: 100px;
+}
+.size-10rem {
+  width: 10rem;
+  height: 10rem;
+}
+```
 
-:::
+## Try It Now
 
-## Try it Now
-
-### HTML Template
+Here's simple boilerplate you can try right away :
 
 ```html
-<html>
+<!doctype html>
+<html lang="en">
   <head>
-    <title>TenoxUI HTML</title>
-    <script src="https://cdn.jsdelivr.net/npm/tenoxui/dist/js/tenoxui.min.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Try TenoxUI</title>
+    <script src="https://cdn.jsdelivr.net/npm/tenoxui@1.0.0/dist/index.iife.js"></script>
   </head>
-  <body>
-    <div class="[width,height]-200px [background]-red"></div>
+  <body class="h-100vh [display]-flex [justify-content]-center [align-items]-center">
+    <div class="radius-1rem size-100px bg-red hover:bg-blue"></div>
     <script>
-      __tenoxui.tenoxui(/* your tenoxui config here */)
+      const { TenoxUI } = __tenoxui__
+
+      // configure TenoxUI
+      const ui = new TenoxUI({
+        property: {
+          bg: 'background',
+          h: 'height',
+          radius: 'borderRadius',
+          size: ['width', 'height']
+        },
+        variants: {
+          hover: '&:hover'
+        }
+      })
+
+      // extract all class names
+      const classNames = [
+        ...new Set(
+          Array.from(document.querySelectorAll('*[class]')).flatMap((element) =>
+            Array.from(element.classList)
+          )
+        )
+      ]
+
+      const styleTag = document.createElement('style')
+      styleTag.textContent = ui.render(classNames)
+      document.head.appendChild(styleTag)
     </script>
   </body>
 </html>
 ```
-
-### React/Preact
-
-```javascript
-import { useLayoutEffect } from 'react' // or 'preact/hooks'
-import { tenoxui } from 'tenoxui'
-
-export default function App() {
-  useLayoutEffect(() => {
-    tenoxui(/* your tenoxui config here */)
-  }, [])
-
-  return <div className="[width,height]-200px [background]-red"></div>
-}
-```
-
-### Vue
-
-```vue
-<script setup>
-import { onMounted } from 'vue'
-import { tenoxui } from 'tenoxui'
-
-onMounted(() => {
-  tenoxui(/* your tenoxui config here */)
-})
-</script>
-
-<template>
-  <div class="[width,height]-200px [background]-red"></div>
-</template>
-```
-
-## What's Next?
-
-- [**Writing Values**](/docs/core/available-values) - What CSS values you can write in TenoxUI.
-
-- **Customizing TenoxUI** - Customizing [types & properties](/docs/config/properties), [values](/docs/config/values), and other to make your development easier.
-
-- [Attributify Mode](/docs/core/attributify) - Using attributify mode to make your element easier to maintain.

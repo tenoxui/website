@@ -27,31 +27,19 @@ export default defineConfig({
         text: 'Introduction',
         collapsed: false,
         items: [
-          { text: 'About TenoxUI', link: '/docs/intro/about' },
-          { text: 'Getting Started', link: '/docs/intro/getting-started' }
+          { text: 'What is TenoxUI?', link: '/docs/intro/about' },
+          { text: 'Getting Started', link: '/docs/intro/getting-started' },
+          { text: 'Configuration Options', link: '/docs/config/intro' }
         ]
       },
       {
-        text: 'Core Concept',
-        collapsed: true,
+        text: 'Guides',
+        collapsed: false,
         items: [
-          { text: 'The Basics', link: '/docs/core/basic' },
-          { text: 'Writing Values', link: '/docs/core/available-values' },
-          { text: 'Pseudo Classes', link: '/docs/core/pseudo-class' },
-          { text: 'Responsive Design', link: '/docs/core/responsive-design' },
-          { text: 'Attributify Mode', link: '/docs/core/attributify' }
-        ]
-      },
-      {
-        text: 'Config',
-        collapsed: true,
-        items: [
-          { text: 'Configuration Options', link: '/docs/config/options' },
-          { text: 'Type Shorthand', link: '/docs/config/properties' },
-          { text: 'Value Alias', link: '/docs/config/values' },
-          { text: 'Creating Utility', link: '/docs/config/classes' },
-          { text: 'Class Name Alias', link: '/docs/config/aliases' },
-          { text: 'Breakpoint', link: '/docs/config/breakpoints' }
+          { text: 'Shorthands', link: '/docs/guides/writing-rules' },
+          { text: 'Writing Values', link: '/docs/guides/writing-values' },
+          { text: 'Variants', link: '/docs/guides/writing-variants' },
+          { text: 'Responsive Design', link: '/docs/guides/responsive' }
         ]
       }
     ],

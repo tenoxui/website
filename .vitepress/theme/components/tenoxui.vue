@@ -1,9 +1,9 @@
 <script setup>
 import { onMounted, ref } from 'vue'
-import { MakeTenoxUI } from '@tenoxui/core/full'
-import { AnyCore } from '@anyframe/core'
+// import { MakeTenoxUI } from '@tenoxui/core/full'
+import { TenoxUI } from 'tenoxui'
 import config from '../../../tenoxui.config'
-const { property: shorthand, values: valueAlias, aliases: alias, classes: utilityClass } = config
+const { property, values, aliases, classes, variants } = config
 // Define props
 const props = defineProps({
   code: {
@@ -29,16 +29,11 @@ onMounted(() => {
     }
   })
 
-  const ui = new AnyCore({
-    shorthand,
-    valueAlias,
-    utilityClass,
-    alias
-  })
+  const ui = new TenoxUI({ property, values, aliases, classes, variants })
 
   const styleTag = document.createElement('style')
   styleTag.id = 'tsu'
-  styleTag.textContent = ui.render(Array.from(classSet))
+  styleTag.textContent = ui.render(Array.from(classSet)).join('\n')
   document.head.appendChild(styleTag)
   /*
   document.querySelectorAll('[data-tenox] *').forEach((element) => {
