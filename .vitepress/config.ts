@@ -38,8 +38,40 @@ export default defineConfig({
         items: [
           { text: 'Shorthands', link: '/docs/guides/writing-rules' },
           { text: 'Writing Values', link: '/docs/guides/writing-values' },
+          { text: 'Responsive Design', link: '/docs/guides/responsive' },
           { text: 'Variants', link: '/docs/guides/writing-variants' },
-          { text: 'Responsive Design', link: '/docs/guides/responsive' }
+          { text: 'Aliases', link: '/docs/guides/aliases' }
+        ]
+      },
+      {
+        text: 'APIs',
+        collapsed: true,
+        items: [
+          { text: '<code>render</code>', link: '/docs/apis/render' },
+          { text: '<code>process</code>', link: '/docs/apis/process' },
+          { text: '<code>parse</code>', link: '/docs/apis/parse' }
+        ]
+      },
+      {
+        text: 'Extra',
+        collapsed: true,
+        items: [{ text: 'Key or Label', link: '/docs/extras/keys' }]
+      },
+      {
+        text: 'Examples',
+        collapsed: true,
+        items: [
+          { text: 'Creating Size Utility', link: '/docs/examples/complex-shorthand' },
+          { text: 'Utilizing Keys', link: '/docs/examples/complex-shorthand' }
+        ]
+      },
+      {
+        text: 'Packages',
+        collapsed: true,
+        items: [
+          { text: '@tenoxui/moxie', link: '/docs/packages/moxie' },
+          { text: '@tenoxui/core', link: '/docs/packages/core' },
+          { text: '@tenoxui/preset-tailwind', link: '/docs/packages/preset-tailwind' }
         ]
       }
     ],

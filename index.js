@@ -1,14 +1,16 @@
+// import { TenoxUI } from '@tenoxui/core'
 import { TenoxUI } from 'tenoxui'
+import { preset } from '@tenoxui/preset-tailwind'
+import { merge as mergeConfig } from '@nousantx/someutils'
 
 const css = new TenoxUI({
   property: {
-    bg: 'background'
-  },
-  variants: {
-    max: ({ value, unit }) => `value:@media (max-width: ${value + (unit || 'px')})`,
-    min: ({ value, unit }) => `value:@media (min-width: ${value + (unit || 'px')})`
+    bg: 'background',
+    m: 'margin',
+    flex: 'display: flex'
   }
 })
 
-console.log(css.render(['bg-red', 'min-668:bg-blue', 'max-48rem:bg-yellow']))
-console.log(css.prefixLoader.process('min-48rem'))
+console.log(css.main.parse('bg-red'))
+console.log(css.main.parse('hover:flex'))
+console.log(css.main.parse('max-768px:m-10px'))

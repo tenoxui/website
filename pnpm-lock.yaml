@@ -10,7 +10,7 @@ importers:
     devDependencies:
       '@anyframe/core':
         specifier: ^0.4.0
-        version: 0.4.0(@tenoxui/moxie@0.7.0)
+        version: 0.4.0(@tenoxui/moxie@0.7.1)
       '@nousantx/someutils':
         specifier: ^0.6.0
         version: 0.6.2
@@ -18,11 +18,14 @@ importers:
         specifier: ^1.24.0
         version: 1.29.2(typescript@5.8.3)
       '@tenoxui/core':
-        specifier: 2.0.0
-        version: 2.0.0(@tenoxui/moxie@0.7.0)
+        specifier: 2.0.1
+        version: 2.0.1(@tenoxui/moxie@0.7.1)
       '@tenoxui/moxie':
-        specifier: ^0.7.0
-        version: 0.7.0
+        specifier: ^0.7.1
+        version: 0.7.1
+      '@tenoxui/preset-tailwind':
+        specifier: 1.0.0-alpha.5
+        version: 1.0.0-alpha.5
       '@tenoxui/property':
         specifier: ^1.4.5
         version: 1.4.5
@@ -34,7 +37,7 @@ importers:
         version: 3.5.3
       tenoxui:
         specifier: 1.0.0-pre.1
-        version: 1.0.0-pre.1(@tenoxui/core@2.0.0(@tenoxui/moxie@0.7.0))(@tenoxui/moxie@0.7.0)
+        version: 1.0.0-pre.1(@tenoxui/core@2.0.1(@tenoxui/moxie@0.7.1))(@tenoxui/moxie@0.7.1)
       typescript:
         specifier: ^5.7.2
         version: 5.8.3
@@ -476,16 +479,19 @@ packages:
   '@shikijs/vscode-textmate@10.0.2':
     resolution: {integrity: sha512-83yeghZ2xxin3Nj8z1NMd/NCuca+gsYXswywDy5bHvwlWL8tpTQmzGeUuHd9FC3E/SBEMvzJRwWEOz5gGes9Qg==}
 
-  '@tenoxui/core@2.0.0':
-    resolution: {integrity: sha512-5j5TSxHvyGCuEMY12y/D9uH7vCILx6LVsUctJ79Wn8POeC+XvwjrOTh8NzLcLEWWhqsXSpa+SbirQtIIW+uS0Q==}
+  '@tenoxui/core@2.0.1':
+    resolution: {integrity: sha512-7xdtAcCv1xqJDXCIj3Rj/xflhk4qtRIMA3CpGp0kAivYU8D6oaDJOMsj3j/5/s3r61gkQ9JOwhaAVTl2f/PpHw==}
     peerDependencies:
       '@tenoxui/moxie': '>=0.7.0'
 
   '@tenoxui/moxie@0.2.0':
     resolution: {integrity: sha512-fxo2H57bOA4eVx+gau8kFhLy3swOv1Os3Fs2rFdFkwGd6D9gw60ud7cO/YKlTXD8KRvqqqE01ZiQsxfKb5iamw==}
 
-  '@tenoxui/moxie@0.7.0':
-    resolution: {integrity: sha512-pDj4UEIiIcSpbSCB6kLxqsZv1DZDPdYUmxNlvbDEt7PplXGJJEfNlJd78ljxAdAsskkywiEFJdXoykra1vUnEw==}
+  '@tenoxui/moxie@0.7.1':
+    resolution: {integrity: sha512-lP/1ZnX3W6x9CIFAelvbLdUyjZ+E5jdqr3CgstBf6O4s+oKHSzpuyCK1AtiBroz48D6/SYgzSr6rAgB9dF3MTA==}
+
+  '@tenoxui/preset-tailwind@1.0.0-alpha.5':
+    resolution: {integrity: sha512-3Ra6SwA123e1GxPt695UcPI8TEY6sNIbH2cHFQ3qgaBwZMDjuvd6dQx3yiWA9Z7CvHuakvNEXJoP3B8v1uuMzA==}
 
   '@tenoxui/property@1.4.5':
     resolution: {integrity: sha512-hAaQTiqPh785Yay7LtGXu4t5ThoH9PVZK1Xd5G6NLh6tO3fBgzLv2n0HIGNAiSVd3Fe4N9OwSMNtMQAKR4RFLw==}
@@ -1199,9 +1205,9 @@ snapshots:
     dependencies:
       '@algolia/client-common': 5.23.4
 
-  '@anyframe/core@0.4.0(@tenoxui/moxie@0.7.0)':
+  '@anyframe/core@0.4.0(@tenoxui/moxie@0.7.1)':
     dependencies:
-      '@tenoxui/moxie': 0.7.0
+      '@tenoxui/moxie': 0.7.1
       '@tenoxui/types': 0.1.2
 
   '@babel/helper-string-parser@7.25.9': {}
@@ -1502,16 +1508,20 @@ snapshots:
 
   '@shikijs/vscode-textmate@10.0.2': {}
 
-  '@tenoxui/core@2.0.0(@tenoxui/moxie@0.7.0)':
+  '@tenoxui/core@2.0.1(@tenoxui/moxie@0.7.1)':
     dependencies:
-      '@tenoxui/moxie': 0.7.0
+      '@tenoxui/moxie': 0.7.1
       '@tenoxui/types': 0.1.2
 
   '@tenoxui/moxie@0.2.0':
     dependencies:
       '@tenoxui/types': 0.1.2
 
-  '@tenoxui/moxie@0.7.0':
+  '@tenoxui/moxie@0.7.1':
+    dependencies:
+      '@tenoxui/types': 0.1.2
+
+  '@tenoxui/preset-tailwind@1.0.0-alpha.5':
     dependencies:
       '@tenoxui/types': 0.1.2
 
@@ -2210,10 +2220,10 @@ snapshots:
 
   tabbable@6.2.0: {}
 
-  tenoxui@1.0.0-pre.1(@tenoxui/core@2.0.0(@tenoxui/moxie@0.7.0))(@tenoxui/moxie@0.7.0):
+  tenoxui@1.0.0-pre.1(@tenoxui/core@2.0.1(@tenoxui/moxie@0.7.1))(@tenoxui/moxie@0.7.1):
     dependencies:
-      '@tenoxui/core': 2.0.0(@tenoxui/moxie@0.7.0)
-      '@tenoxui/moxie': 0.7.0
+      '@tenoxui/core': 2.0.1(@tenoxui/moxie@0.7.1)
+      '@tenoxui/moxie': 0.7.1
       '@tenoxui/types': 0.1.2
 
   trim-lines@3.0.1: {}

@@ -183,7 +183,7 @@ You will get this output :
 }
 ```
 
-The `f2` shorthand will generate exact value you define from `property`; `flexdirection: column` which is branded with `value:` mark before the rules.
+The `f2` shorthand will generate exact value you define from `property`; `flexDirection: column` which is branded with `value:` mark before the rules.
 
 So, use `value:` mark if your shorthand returns direct CSS rules.
 
