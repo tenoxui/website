@@ -37,7 +37,7 @@ const { TenoxUI } = require('tenoxui')
 ### `iife/umd`
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/tenoxui/dist/index.iife.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/tenoxui/dist/bundle.iife.js"></script>
 <script>
   const { TenoxUI } = __tenoxui__
 </script>
@@ -89,7 +89,7 @@ Here's simple boilerplate you can try right away :
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Try TenoxUI</title>
-    <script src="https://cdn.jsdelivr.net/npm/tenoxui@1.0.0/dist/index.iife.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tenoxui@1.0.0/dist/bundle.iife.js"></script>
   </head>
   <body class="h-100vh [display]-flex [justify-content]-center [align-items]-center">
     <div class="radius-1rem size-100px bg-red hover:bg-blue"></div>

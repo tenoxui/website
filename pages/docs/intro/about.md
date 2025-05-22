@@ -66,8 +66,6 @@ Without much configuration, you already create `w-*` utility that allows you acc
 
 ## What's Next?
 
-- [**Writing Rules**](/) - A complete guide for extending shorthands to the next level
-- [**Customizing Variants**](/) - A guide to write variants in TenoxUI
-- [**Responsive Design**](/) - Learn how to create a beautiful site that works in every screen size
-- [`values`](/) - Creating CSS value aliases
-- [`values`](/) - Creating CSS value aliases
+- [**Writing Rules**](/docs/guides/writing-rules) - A complete guide for extending shorthands to the next level
+- [**Customizing Variants**](/docs/guides/writing-variants) - A guide to write variants in TenoxUI
+- [**Responsive Design**](/docs/guides/responsive) - Learn how to create a beautiful site that works in every screen size
